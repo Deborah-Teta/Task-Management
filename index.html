@@ -15,7 +15,7 @@
                 <i class="font-awesome fa-tasks text-indigo-600 text-2xl mr-3"></i>
                 <h1 class="text-2xl font-bold text-amber-600">TaskFlow</h1>
             </div>
-            <div class="flex justify-between items-center space-x-4">
+            <div class="flex justify-between items-center space-x-8">
                 <span class="text-amber-600 font-bold text-2xl">Welcome!!</span>
             </div>
         </div>
@@ -23,28 +23,51 @@
     <main class="container mx-auto px-4 py-8">
         <!--status part-->
         <section>
-            <div class="flex flex-cols-3 justify-center items-center gap-8 mt-12 mb-6">
-                <div class="w-64 h-32 rounded-lg p-3 bg-gray-900 shadow-lg sm: p-4 border border-gray-700">
+            <div class="flex flex-cols-3 justify-between items-center gap-12 mb-6">
+                <div class="w-80 h-32 rounded-lg p-3 bg-gray-900 shadow-lg sm: p-4 border border-gray-700">
                     <div class="text-xl sm:text-2xl font-bold text-white" id="totalTasks">0</div>
                     <div class="text-xs font-semibold text-blue-400 sm:text-sm">Total Tasks</div>
                 </div>
-                <div class="w-64 h-32 rounded-lg p-3 bg-gray-900 shadow-lg sm: p-4 border border-gray-700">
+                <div class="w-80 h-32 rounded-lg p-3 bg-gray-900 shadow-lg sm: p-4 border border-gray-700">
                     <div class="text-xl sm:text-2xl font-bold text-white" id="activeTasks">0</div>
                     <div class="text-xs font-semibold text-amber-600 sm:text-sm">Active Tasks</div>
                 </div>
-                <div class="w-64 h-32 rounded-lg p-3 bg-gray-900 shadow-lg sm: p-4 border border-gray-700">
+                <div class="w-80 h-32 rounded-lg p-3 bg-gray-900 shadow-lg sm: p-4 border border-gray-700">
                     <div class="text-xl sm:text-2xl font-bold text-white" id="completed">0</div>
                     <div class="text-xs font-semibold text-green-500 sm:text-sm">Completed</div>
                 </div>
             </div>
         </section>
         <!--Add task input form-->
-        <section>
-            <div>
-
+            <div class="flex flex-cols-1 lg:flex-cols-4 gap-8">
+                <div class="lg:col-span-3">
+                    <div class="bg-gray-900 rounded-lg shadow-lg p-6 top-6">
+                        <h2 class="text-xl font-bold text-amber-600 mb-6">Add New Tasks</h2>
+                        <form id="task-form" class="space-y-4">
+                            <div>
+                                <label for="task-name" class="block text-sm font-medium text-white mb-1">Task Name</label>
+                                <input type="text" id="task-name" class="w-full text-gray-400 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 ring-indigo-500 border-indigo-500"
+                                placeholder="Enter task name" required>
+                            </div>
+                            <div>
+                                <label for="due-date" class="block text-sm font-medium text-white mb-1">Due Date</label>
+                                <input type="date" id="due-date" class="w-full text-gray-400 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 ring-indigo-500 border-indigo-500">
+                            </div>
+                            <div>
+                                <label for="task-priority" class="block text-sm font-medium text-white mb-1">Priority</label>
+                                <select id="task-priority" class="w-full text-gray-400 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition duration-200 flex items-center justify-center">
+                            <i class="fas fa-plus mr-2"></i> Add Task"</button>
+                        </form>
+                    </div>
+                </div>
+                
             </div>
-        </section>
-
     </main>
 
 </body>
